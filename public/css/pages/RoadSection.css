@@ -1,0 +1,19 @@
+.records-head,.record-row{grid-template-columns:1.9fr 0.9fr 1fr 1fr 1fr 100px}
+.road-name-main{font-weight:600;color:#1e293b;margin-bottom:0.125rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.road-id-sub{font-size:0.7rem;color:#94a3b8;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.spatial-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:#ecfdf5;color:#059669;border:1px solid #05966920;border-radius:99px;font-size:13px;font-weight:700;width:fit-content}
+@media (max-width:1024px){.records-head{display:none !important}.record-row{grid-template-columns:1fr !important;gap:12px;padding:20px 16px;background:white;border-radius:16px;margin-bottom:12px;border:1px solid #f1f5f9;box-shadow:0 1px 2px rgba(0,0,0,0.02)}.road-name-main{font-size:15px;font-weight:700;color:#1e293b}.road-id-sub{font-size:11px;margin-top:2px}.spatial-badge{padding:4px 12px;font-size:11px}}
+.records-head,.record-row{grid-template-columns:2fr 1fr 1fr 1fr 1fr 100px}
+.road-name-main{font-weight:600;color:#1e293b;margin-bottom:0.125rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.road-id-sub{font-size:0.7rem;color:#94a3b8;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.spatial-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:#ecfdf5;color:#059669;border:1px solid #05966920;border-radius:99px;font-size:13px;font-weight:700;width:fit-content}
+@media (max-width:1024px){.records-head{display:none !important}.record-row{grid-template-columns:1fr !important;gap:12px;padding:20px 16px;background:white;border-radius:16px;margin-bottom:12px;border:1px solid #f1f5f9;box-shadow:0 1px 2px rgba(0,0,0,0.02)}.road-name-main{font-size:15px;font-weight:700;color:#1e293b}.road-id-sub{font-size:11px;margin-top:2px}.spatial-badge{padding:4px 12px;font-size:11px}}
+.btn-delete-toggle{display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:#fee2e2;color:#ef4444;border:none;padding:0;border-radius:8px;font-weight:700;font-size:14px;cursor:pointer;transition:all 0.2s cubic-bezier(0.4,0,0.2,1)}
+@media (min-width:480px){.btn-delete-toggle{width:auto;height:38px;padding:0 12px;border-radius:10px}}
+@media (min-width:640px){.btn-delete-toggle{height:44px;padding:0 20px;border-radius:12px;font-size:16px;gap:8px}}
+@media (min-width:1025px){.btn-delete-toggle{height:52px;padding:0 32px;border-radius:16px;font-size:18px;gap:12px}}
+.btn-delete-toggle:hover{background:#fecaca;transform:translateY(-1px)}
+.btn-delete-toggle.active{background:#ef4444;color:#fff;box-shadow:0 10px 15px -3px rgba(239,68,68,0.3)}
+.action-btn.delete-select-btn{background:#f1f5f9;color:#94a3b8;border:2px solid transparent}
+.action-btn.delete-select-btn.selected{background:#ef4444;color:#fff;border-color:#ef4444}
+.record-row.to-delete{background-color:#fff1f2;border-left:4px solid #ef4444}

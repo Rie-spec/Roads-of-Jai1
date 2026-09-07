@@ -1,0 +1,48 @@
+.sidebar{position:fixed;top:0;height:100vh;background:linear-gradient(to bottom,#FBBF24,#78350F,#1A0A01);display:flex;flex-direction:column;z-index:100; box-shadow:0 25px 50px -12px rgba(0,0,0,0.25);transition:transform 300ms cubic-bezier(0.4,0,0.2,1),width 300ms cubic-bezier(0.4,0,0.2,1);overflow:hidden;width:280px;left:0;transform:translateX(-100%);border:none;border-radius:0 24px 24px 0}
+@media (min-width:1025px){.sidebar{width:88px;transform:translateX(0); z-index:50}}
+
+/* Mobile Open State */
+.sidebar.mobile-open{transform:translateX(0) !important}
+.sidebar-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);z-index:90;opacity:0;pointer-events:none;transition:opacity 300ms ease;display:block}
+.sidebar-overlay.active{opacity:1;pointer-events:auto}
+.mobile-close-btn{margin-left:auto;background:rgba(251,191,36,0.2); backdrop-filter:blur(12px);border:1px solid rgba(251,191,36,0.3);color:#FBBF24;cursor:pointer;width:32px;height:32px;border-radius:10px;display:flex;align-items:center;justify-content:center;transition:all 0.3s cubic-bezier(0.4,0,0.2,1);box-shadow:0 4px 15px -1px rgba(0,0,0,0.2)}
+.mobile-close-btn:hover{background:rgba(251,191,36,0.4);color:white;transform:rotate(90deg) scale(1.1)}
+.mobile-close-btn:active{transform:scale(0.9) rotate(90deg)}
+@media (min-width:1025px){.mobile-close-btn{display:none !important}}
+@media (min-width:1025px){.sidebar:hover,.sidebar.is-hovered,html.sidebar-is-hovered .sidebar{width:280px}.sidebar.collapsed:hover,.sidebar.collapsed.is-hovered,html.sidebar-is-hovered .sidebar.collapsed{width:88px}}
+.sidebar-top{display:flex;flex-direction:column;flex:1;overflow-y:auto;overflow-x:hidden}
+.no-scrollbar::-webkit-scrollbar{display:none}
+.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+.brand-row{height:96px;display:flex;align-items:center;padding:0 18px;flex-shrink:0}
+.brand-icon-box{background:rgba(255,255,255,0.1);backdrop-filter:blur(12px);padding:10px;border-radius:12px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.2);box-shadow:0 10px 15px -3px rgba(0,0,0,0.1);width:30px;height:30px;flex-shrink:0}
+.brand-name{margin-left:16px;font-weight:900;font-size:20px;color:white;letter-spacing:0.1em;line-height:1;opacity:0;transition:opacity 200ms ease;white-space:nowrap}
+.sidebar-label{font-size:10px;font-weight:700;color:#FBBF24;text-transform:uppercase;letter-spacing:0.2em;padding:0 32px;margin-bottom:16px;opacity:0;transition:opacity 200ms ease;white-space:nowrap;flex-shrink:0}
+.sidebar-nav{flex:1;padding:0 20px}
+.nav-item{display:flex;align-items:center;gap:16px;padding:12px 13px;border-radius:12px;transition:all 300ms ease;cursor:pointer;margin-bottom:4px;text-decoration:none;border:1px solid transparent;color:rgba(255,255,255,0.6);overflow:hidden}
+.nav-item:hover{background:rgba(255,255,255,0.05);color:white}
+.nav-item.active{background:rgba(255,255,255,0.15);color:#FBBF24;border-color:#FBBF24;box-shadow:0 0 25px -5px rgba(251,191,36,0.6)}
+.nav-item.active .nav-label{color:#ffffff}
+.nav-item svg{flex-shrink:0;width:22px;height:22px}
+.nav-label{font-weight:500;white-space:nowrap;font-size:14px;opacity:0;transition:opacity 200ms ease}
+
+/* Footer */
+.sidebar-footer{border-top:1px solid rgba(255,255,255,0.05);background:rgba(0,0,0,0.1);flex-shrink:0;padding:24px 20px;display:flex;flex-direction:column;gap:24px}
+.profile-card{display:flex;align-items:center;border-radius:16px;height:56px;transition:all 300ms ease;border:1px solid transparent;padding:0 4px;gap:12px}
+.sidebar:hover .profile-card,.sidebar.is-hovered .profile-card,html.sidebar-is-hovered .profile-card{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.05);padding:0 12px}
+.sidebar.collapsed .profile-card,.sidebar.collapsed:hover .profile-card{background:transparent;border-color:transparent;padding:0 4px}
+.profile-avatar{width:40px;height:40px;border-radius:12px;background:linear-gradient(to bottom right,white,#FBBF24);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:700;color:#78350F;box-shadow:0 10px 15px -3px rgba(0,0,0,0.1)}
+.profile-text{display:flex;flex-direction:column;min-width:0;max-width:0;opacity:0;overflow:hidden;transition:all 300ms ease}
+.sidebar:hover .profile-text,.sidebar.is-hovered .profile-text,html.sidebar-is-hovered .profile-text{max-width:200px;opacity:1}
+.sidebar.collapsed .profile-text,.sidebar.collapsed:hover .profile-text{max-width:0;opacity:0}
+.profile-name{font-size:14px;font-weight:700;color:white;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.profile-role{font-size:10px;text-transform:uppercase;font-weight:700;color:#FBBF24;letter-spacing:0.05em;opacity:0.9;white-space:nowrap}
+.logout-btn{background:transparent;border:none;cursor:pointer;text-align:left;display:flex;align-items:center;gap:16px;padding:12px 13px;border-radius:12px;transition:all 300ms ease;color:rgba(255,255,255,0.6);width:100%}
+.logout-btn:hover{background:#EF4444;color:#ffffff;box-shadow:0 4px 12px rgba(239,68,68,0.4)}
+.logout-btn:active{background:rgba(239,68,68,0.2);transform:scale(0.98)}
+.logout-btn svg{flex-shrink:0;width:22px;height:22px}
+.sidebar:not(.collapsed):hover .brand-name,.sidebar:not(.collapsed):hover .sidebar-label,.sidebar:not(.collapsed):hover .nav-label,.sidebar:not(.collapsed):hover .profile-text,.sidebar.is-hovered:not(.collapsed) .brand-name,.sidebar.is-hovered:not(.collapsed) .sidebar-label,.sidebar.is-hovered:not(.collapsed) .nav-label,.sidebar.is-hovered:not(.collapsed) .profile-text,html.sidebar-is-hovered .sidebar:not(.collapsed) .brand-name,html.sidebar-is-hovered .sidebar:not(.collapsed) .sidebar-label,html.sidebar-is-hovered .sidebar:not(.collapsed) .nav-label,html.sidebar-is-hovered .sidebar:not(.collapsed) .profile-text{opacity:1}
+@media (min-width:1025px){#mainContent{transition:padding-left 300ms cubic-bezier(0.4,0,0.2,1);padding-left:88px;background-color:transparent;min-height:100vh}.sidebar:not(.collapsed):hover ~ #mainContent,.sidebar.is-hovered:not(.collapsed) ~ #mainContent,html.sidebar-is-hovered .sidebar:not(.collapsed) ~ #mainContent{padding-left:280px}.sidebar:not(.collapsed):hover ~ .page-layout .main-content,.sidebar.is-hovered:not(.collapsed) ~ .page-layout .main-content,html.sidebar-is-hovered .sidebar:not(.collapsed) ~ .page-layout .main-content{padding-left:280px}}
+@media (min-width:1025px){.sidebar.collapsed{width:88px !important}.sidebar.collapsed ~ #mainContent{padding-left:88px !important}}
+
+/* Mobile Label Visibility */
+@media (max-width:1024px){.sidebar.mobile-open .brand-name,.sidebar.mobile-open .sidebar-label,.sidebar.mobile-open .nav-label,.sidebar.mobile-open .profile-text{opacity:1 !important;max-width:none !important}}

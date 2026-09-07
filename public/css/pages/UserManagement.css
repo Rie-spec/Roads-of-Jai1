@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* Page Specific Overrides */
+.user-management-page .records-shell{margin-top:20px}
+
+/* Identical Layout to Engineers */
+.user-management-page .records-head{grid-template-columns:2fr 1.5fr 1.5fr 1.5fr 100px}
+.user-management-page .record-row{grid-template-columns:2fr 1.5fr 1.5fr 1.5fr 100px}
+.rank-badge{padding:4px 12px;border-radius:999px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.rank-senior,.rank-engineer-iv,.rank-engineer-iii{background:#fef3c7;color:#92400e;border:1px solid #fde68a}
+.rank-junior,.rank-engineer-i,.rank-engineer-ii{background:#ecfdf5;color:#065f46;border:1px solid #d1fae5}
+.rank-lead,.rank-admin{background:#eff6ff;color:#1e40af;border:1px solid #dbeafe}
+.engineer-name-cell{display:flex;align-items:center;gap:12px}
+.engineer-avatar-mini{width:32px;height:32px;background:linear-gradient(135deg,#78350F,#92400e);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:12px}
+.btn-delete-toggle{display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:#fee2e2;color:#ef4444;border:none;padding:0;border-radius:8px;font-weight:700;font-size:14px;cursor:pointer;transition:all 0.2s cubic-bezier(0.4,0,0.2,1)}
+@media (min-width:480px){.btn-delete-toggle{width:auto;height:38px;padding:0 12px;border-radius:10px}}
+@media (min-width:640px){.btn-delete-toggle{height:44px;padding:0 20px;border-radius:12px;font-size:16px;gap:8px}}
+@media (min-width:1025px){.btn-delete-toggle{height:52px;padding:0 32px;border-radius:16px;font-size:18px;gap:12px}}
+.btn-delete-toggle:hover{background:#fecaca;transform:translateY(-1px)}
+.btn-delete-toggle.active{background:#ef4444;color:#fff;box-shadow:0 10px 15px -3px rgba(239,68,68,0.3)}
+.action-btn.delete-select-btn{background:#f1f5f9;color:#94a3b8;border:2px solid transparent;transition:all 0.2s}
+.action-btn.delete-select-btn:hover{border-color:#ef4444;color:#ef4444}
+.action-btn.delete-select-btn.selected{background:#ef4444;color:#fff;border-color:#ef4444;transform:scale(1.05)}
+.record-row.to-delete{background-color:#fff1f2;border-left:4px solid #ef4444}
+
+/* Modal Specific Styles */
+.btn-modal-cancel:hover{background:#f8fafc !important;border-color:#cbd5e1 !important;color:#1e293b !important}
+.btn-modal-confirm:hover{background:#dc2626 !important;transform:translateY(-1px)}
+
+/* Animations */
+.user-management-page .record-row{animation:slideInUp 0.4s cubic-bezier(0.4,0,0.2,1) forwards}
+@keyframes slideInUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media (max-width:1024px){.user-management-page .records-head{display:none !important}.user-management-page .record-row{grid-template-columns:1fr !important;gap:12px;padding:20px 16px;background:white;border-radius:16px;margin-bottom:12px;border:1px solid #f1f5f9;box-shadow:0 1px 2px rgba(0,0,0,0.02)}.engineer-name-cell{font-size:15px;font-weight:700;color:#1e293b}.rank-badge{align-self:flex-start}.user-management-page .record-row > .col:not(.engineer-name-cell){font-size:13px;color:#64748b}}
