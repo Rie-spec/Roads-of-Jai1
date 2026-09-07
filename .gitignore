@@ -1,9 +1,4 @@
-.env
-.env.local
+.gitignore
+node_modules/
 .DS_Store
-Thumbs.db
-.vscode/
-.idea/
-*.log
-*.tmp
-*.cache
+.env
